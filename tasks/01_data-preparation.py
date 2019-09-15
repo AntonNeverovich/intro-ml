@@ -1,5 +1,5 @@
 import pandas
-from tests import test
+from utils import raw_data_preparation as rdp
 
 data = pandas.read_csv("data/_ea07570741a3ec966e284208f588e50e_titanic.csv", index_col='PassengerId')
 
@@ -31,7 +31,7 @@ for row in list:
         result_set.append(i)
 
 
-test.cleaning_data(result_set, ',', '(', ')', '\"')
+rdp.cleaning_data1(result_set, ',', '(', ')', '\"')
 answ = pandas.DataFrame(result_set, columns=['first_name'])
 answ = answ[answ['first_name'] != 'Mrs.']
 answ = answ[answ['first_name'] != 'Miss.']
