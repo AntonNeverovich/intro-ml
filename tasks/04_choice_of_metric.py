@@ -32,4 +32,4 @@ def get_best_score(X, y, cv):
 
 
 score, p = get_best_score(X, y, cv)
-print 'score = {0}\np = {1}'.format(score.round(2), p.round(2))
+print('score = {0}\np = {1}'.format(score.round(2), p.round(2)))

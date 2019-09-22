@@ -6,6 +6,7 @@ data = data[['Pclass', 'Fare', 'Age', 'Sex', 'Survived']]
 data = data.dropna()
 data.loc[data['Sex'] != 'female', 'Sex'] = 0
 data.loc[data['Sex'] == 'female', 'Sex'] = 1
+print(data)
 
 X = data[['Pclass', 'Fare', 'Age', 'Sex']]
 Y = data['Survived']
@@ -15,4 +16,4 @@ clf.fit(X, Y)
 importances = clf.feature_importances_
 
 
-print importances.round(4)
+print(importances.round(4))

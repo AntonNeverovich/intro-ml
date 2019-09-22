@@ -51,9 +51,9 @@ def get_best_score(X, y, cv):
 
 
 score, k = get_best_score(X, y, cv)
-print 'k - optimal = {0}\nclassification accuracy = {1}'.format(k, score.round(2))
+print('k - optimal = {0}\nclassification accuracy = {1}'.format(k, score.round(2)))
 
 
 # feature scaling
 score1, k1 = get_best_score(scale(X), y, cv)
-print 'k1 - optimal = {0}\nnew classification accuracy = {1}'.format(k1, score1.round(2))
+print('k1 - optimal = {0}\nnew classification accuracy = {1}'.format(k1, score1.round(2)))
