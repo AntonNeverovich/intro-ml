@@ -1,7 +1,7 @@
 names = ['\"Cumings\"', '(Flo\"rence', ')Tha)yer)', 'Lai((((,""",,na']
 names2 = []
 names2 = []
-print names
+print(names)
 
 
 def delete_symbol(elem, symbol):
@@ -34,4 +34,4 @@ def cleaning_data2(list, symbols):
 
 names2 = cleaning_data1(names, '\"', '(', ')', ',')
 
-print names2
+print(names2)

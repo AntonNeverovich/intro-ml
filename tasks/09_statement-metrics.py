@@ -20,10 +20,10 @@ acc = accuracy_score(df["true"], df["pred"])
 pr = precision_score(df["true"], df["pred"])
 rec = recall_score(df["true"], df["pred"])
 f1 = f1_score(df["true"], df["pred"])
-print("Accuracy: {0}\nPrecision: {1}\nRecall: {2}\nF1_score: {3}".format(acc.round(2),
-                                                                         pr.round(2),
-                                                                         rec.round(2),
-                                                                         f1.round(2)))
+print("Accuracy: {0}\nPrecision: {1}\nRecall: {2}\nF1_score: {3}".format(acc.__round__(2),
+                                                                         pr.__round__(2),
+                                                                         rec.__round__(2),
+                                                                         f1.__round__(2)))
 
 
 # loading data 2
