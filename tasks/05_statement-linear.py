@@ -22,7 +22,6 @@ acc_before = accuracy_score(y_test, model.predict(X_test))
 print("acc before = {0}".format(acc_before))
 
 
-
 # normalizing training and test samples
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
