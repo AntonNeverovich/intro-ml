@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import bz2
 import json
 import pandas
@@ -11,8 +9,10 @@ def last_value(series, times, time_point=60*5):
     values = [v for t, v in zip(times, series) if t <= time_point]
     return values[-1] if len(values) > 0 else 0
 
+
 def filter_events(events, time_point=60*5):
     return [event for event in events if event['time'] <= time_point]
+
 
 def extract_match_features(match, time_point=None):
     extract_items_time = [
@@ -34,8 +34,8 @@ def extract_match_features(match, time_point=None):
     ]
     
     # player features
-    
     times = match['times']
+
     for player_index, player in enumerate(match['players']):
         player_id = ('r%d' % (player_index+1)) if player_index < 5 else ('d%d' % (player_index-4))
         
@@ -123,7 +123,7 @@ def iterate_matches(matches_filename):
             match = json.loads(line)
             yield match
             if (n+1) % 1000 == 0:
-                print 'Processed %d matches' % (n+1)
+                print('Processed %d matches' % (n+1))
 
                 
 def create_table(matches_filename, time_point):
